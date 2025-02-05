@@ -4,6 +4,7 @@ import ProductCard from '../components/ProductCard/ProductCard';
 import { useProductContext } from '../context/ProductContext';
 import { useQuery } from 'react-query';
 import { fetchCategories, fetchProducts } from '../api/api';
+import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   const { products, selectedCategory, dispatch } = useProductContext();
@@ -57,6 +58,7 @@ const Home: React.FC = () => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
